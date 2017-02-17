@@ -3,6 +3,13 @@
   var slice = Array.prototype.slice;
   var urlStyles = [ 'fill', 'stroke', 'clip-path', 'marker-start', 'marker-mid', 'marker-end', 'mask', 'filter' ];
 
+  	d3.functor = function functor(v) {
+		return typeof v === "function" ? v : function() {
+				return v;
+			};
+	};
+
+  
   function wrap(target, wrapper) {
     return function wrapped() {
       return wrapper.apply(this, [ target ].concat(slice.call(arguments)));
