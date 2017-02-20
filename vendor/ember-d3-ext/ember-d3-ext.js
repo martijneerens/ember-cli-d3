@@ -106,9 +106,9 @@
         var fn = args.shift();
         var selection = fn.apply(this, args);
 
-        selection.each('start.ember-waiter', increment);
-        selection.each('interrupt.ember-waiter', decrement);
-        selection.each('end.ember-waiter', decrement);
+//         selection.each('start.ember-waiter', increment);
+//         selection.each('interrupt.ember-waiter', decrement);
+//         selection.each('end.ember-waiter', decrement);
 
         return selection;
       });
